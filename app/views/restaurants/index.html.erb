@@ -1,0 +1,13 @@
+<h1>Tous les restos</h1>
+
+<ul class="list-group">
+  <li class='list-group-item disabled'>
+    <span class='name'>Name</span>
+    <span class='category'>Category</span>
+  <% @restaurants.each do |restaurant| %>
+  <li class='list-group-item'>
+    <span class='name'><%= link_to restaurant.name, restaurant_path(restaurant) %></span>
+    <span class='category'><%= restaurant.category %></span>
+  </li>
+  <% end %>
+</ul>
